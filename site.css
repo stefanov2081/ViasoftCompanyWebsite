@@ -3,11 +3,298 @@
 *:before {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #262626;
+}
+
+a {
+    text-decoration: none;
 }
 
 html, body {
-    height: 100%;
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
+
+/* Navigation start */
+/* Mobile first start */
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    height: 56px;
+    padding: 0 15px 0 15px;
+
+    border-bottom: 1px solid #E6E6E6;
+
+    font-size: 13px;
+}
+
+nav > ul.desktop-navigation {
+    display: none;
+}
+
+/* Mobile navigation start */
+div.mobile-navigation {
+    min-width: 42px;
+}
+
+.mobile-navigation > input {
+    display: none;
+}
+
+.mobile-navigation > input:checked + label > span {
+    background: transparent;
+}
+
+.mobile-navigation > input:checked + label > span::before {
+    transform: translate(0, 4px) rotate(45deg);
+}
+
+.mobile-navigation > input:checked + label > span::after {
+    transform: translate(0, -4px) rotate(-45deg);
+}
+
+.mobile-navigation > input:checked ~ ul {
+    display: inline-flex;
+    flex-flow: column nowrap;
+}
+
+.mobile-navigation > label {
+    position: absolute;
+    padding: 26px 11px;
+    user-select: none;
+}
+
+.mobile-navigation > label > span {
+    width: 20px;
+    height: 1px;
+    background-color: #262626;
+    position: relative;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+
+.mobile-navigation > label > span::before {
+    top: -4px;
+}
+
+.mobile-navigation > label > span::after {
+    top: 4px;
+}
+
+.mobile-navigation > label > span::before,
+.mobile-navigation > label > span::after {
+    height: 1px;
+    width: 20px;
+    background-color: #262626;
+    position: absolute;
+    content: "";
+    transition: all .2s ease-in-out;
+}
+
+/* Expand navigation button end */
+
+.mobile-navigation > ul.mobile-navigation-items {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #F2F2F2;
+    border: 1px solid #E6E6E6;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li {
+    position: relative;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 15px 0 15px;
+    
+    border-bottom: 1px solid #FFF;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li > a {
+    display: inline-flex;
+    flex-basis: 55px;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.expandable > div.expander {
+    width: 100%;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.expandable > div.expander > input {
+    display: none;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.expandable >  div.expander > label {
+    transform: rotate(90deg);
+
+    position: absolute;
+    top: -8px;
+    right: 22px;
+    padding: 24px;
+    display: inline-block;
+    
+    font-family: Times,"Times New Roman",Georgia,serif;
+    font-size: 20px;
+    font-weight: 900;
+    user-select: none;
+    transition: all .2s ease-in-out;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.expandable > div.expander > input:checked ~ label {
+    transform: rotate(270deg);
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.expandable > div.expander > input:checked ~ ul {
+    display: block;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.prominent {
+    border: none;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li.prominent > a {
+    background-color: #4AB847;
+    color: #FFF;
+}
+
+/* Second level navigation */
+.mobile-navigation > ul.mobile-navigation-items > li > div.expander > ul {
+    display: none;
+    padding: 0 0 0 15px;
+    width: 100%;
+    list-style: none;
+}
+
+/* Second level navigation */
+.mobile-navigation > ul.mobile-navigation-items > li > div.expander > ul > li {
+    border-top: 1px solid #FFF;
+}
+
+.mobile-navigation > ul.mobile-navigation-items > li > div.expander > ul >  li > a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 55px;
+}
+
+/* Mobile navigation end */
+
+/* Desktop navigation start */
+@media screen and (min-width: 860px) {
+    nav > div.mobile-navigation {
+        display: none;
+    }
+
+    nav > ul.desktop-navigation {
+        display: inline-flex; /* I need this to remove trailing whitespaces after li elements */
+    }
+}
+
+nav > ul.desktop-navigation {
+    margin: 0;
+}
+
+nav > ul > li {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+    
+    border-left: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+}
+
+nav > ul > li > a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 100%;
+}
+
+nav > ul > li.expandable > a::after{
+    content: '›';
+    transform: rotate(90deg);
+
+    display: inline-block;
+    margin-left: 10px;
+
+    font-family: Times,"Times New Roman",Georgia,serif;
+    font-size: 18px;
+    font-weight: 900;
+    user-select: none;
+}
+
+nav > ul > li.expandable:hover {
+    background-color: #F2F2F2;
+
+    border-left: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+}
+
+nav > ul > li.expandable > a:hover {
+    background-color: #FAFAFA;
+}
+
+nav > ul > li.expandable:hover > ul {
+    display: inline-block;
+}
+
+nav > ul > li.prominent {
+    border: none;
+}
+
+nav > ul > li.prominent > a {
+    background-color: #4AB847;
+    color: #FFF;
+}
+
+/* Second level navigation */
+nav > ul > li > ul {
+    position: absolute;
+    left: -1px;
+    top: 54px;
+
+    display: none;
+    padding: 0;
+    min-width: calc(100% + 2px);
+
+    list-style: none;
+
+    background-color: #F2F2F2;
+
+    border: 1px solid #E6E6E6;
+}
+
+/* Second level navigation */
+nav > ul > li > ul.wide {
+    width: 178px;
+}
+
+nav > ul > li > ul > li > a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 56px;
+}
+
+nav > ul > li > ul > li > a:hover {
+    background-color: #FAFAFA;
+}
+/* Desktop navigation end */
+
+/* Navigation end */
