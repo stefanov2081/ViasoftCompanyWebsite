@@ -298,4 +298,256 @@ nav > ul > li > ul > li > a:hover {
 }
 /* Desktop navigation end */
 
+/* Layout start */
+/* Mobile layout start */
+.main-content {
+    width: 100%;
+    padding: 0 15px 55px 15px;
+}
+
+main > section.hero-image {
+    min-height: 366px;
+}
+
+main > section.hero-image > h1,
+main > section.hero-image > p,
+main > section.hero-image > a {
+    margin: 0 0 15px 0;
+    color: #FFF;
+}
+
+main > section.hero-image > h1 {
+    padding-top: 55px;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+main > section.hero-image > p {
+    font-size: 18px;
+    max-width: 900px;
+}
+
+main > section.hero-image > a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: #4AB847;
+    user-select: none;
+}
+
+main > section.hero-image > a:hover {
+    background-color: #55D551;
+}
+
+footer {
+    background-color: #F2F2F2;
+}
+
+footer .footer-column {
+    flex: 1 0 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 50px;
+}
+
+footer .footer-column > a {
+    margin-bottom: 10px;
+    color: #616161;
+    user-select: none;
+}
+
+footer .footer-column > a:hover {
+    color: #363636;
+    text-decoration: underline;
+}
+
+footer .footer-column > a:first-child {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+footer .footer-column > p {
+    margin: 5px 0;
+    color: #616161;
+}
+
+/* Mobile layout end */
+/* Desktop layout start */
+@media screen and (min-width: 860px) {
+    .main-content {
+        padding: 0 100px 55px 100px;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .main-content {
+        width: 100%;
+        padding: 0 272px 55px 272px;
+    }
+}
+
+/* Desktop layout end */
+
+/* Layout end */
+
+/* Generic start */
+h2 {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dark {
+    background-color: #222222;
+}
+
+.grey {
+    background-color: #FAF9F8;
+}
+
+.light-text {
+    color: #FFF;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.centered {
+    justify-content: center;
+}
+
+/* Generic end */
+
+/* What We Do - Page - Start */
+main > section.hero-image {
+    background: url('images/hero-images/what-we-do.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card {
+    flex-basis: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.service-card > img {
+    flex: 1 0 140px;
+    margin-right: 10px;
+}
+
+.service-card > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.service-card > div > h3 {
+    margin: 0 0 10px 0;
+}
+
+.service-card > div > p {
+    margin: 0;
+}
+
+@media screen and (min-width: 860px) {
+    .service-card > img {
+        flex-basis: 120px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .service-card > img {
+        flex-basis: 100px;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .service-card {
+        flex-basis: 50%;
+    }
+}
+
+.solution-card {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 369px;
+}
+
+.solution-card > img {
+    width: 65px;
+    margin-top: 15px;
+}
+
+.solution-card > p {
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+}
+
+@media screen and (min-width: 860px) {
+    .solution-card {
+        flex-basis: calc(100% / 2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .solution-card {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .solution-card {
+        flex-basis: calc(100% / 4);
+    }
+}
+
+.spaced-around {
+    justify-content: space-around;
+}
+
+.tech-card {
+    margin: 10px 0;
+    flex: 1 0 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.tech-card > p {
+    flex-basis: 100%;
+}
+
+.tech-card > div {
+    width: 100px;
+    height: 1px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+/* What We Do - Page - End */
+
+
 /* Navigation end */
