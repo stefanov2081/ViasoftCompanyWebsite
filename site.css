@@ -352,6 +352,10 @@ main > section.hero-image > a:hover {
     background-color: #55D551;
 }
 
+main  p {
+    font-size: 18px;
+}
+
 footer {
     background-color: #F2F2F2;
 }
@@ -444,10 +448,14 @@ h3 {
     justify-content: center;
 }
 
+.condensed > * {
+    margin: 0;
+}
+
 /* Generic end */
 
 /* What We Do - Page - Start */
-main > section.hero-image {
+main > section.hero-image.what-we-do {
     background: url('images/hero-images/what-we-do.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -559,5 +567,14 @@ main > section.hero-image {
 
 /* What We Do - Page - End */
 
+/* About Us Start */
+main > section.hero-image.about-us {
+    background: url('images/hero-images/about-us.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* About Us End */
 
 /* Navigation end */
