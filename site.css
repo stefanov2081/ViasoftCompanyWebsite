@@ -194,12 +194,22 @@ div.mobile-navigation {
 
 /* Desktop navigation start */
 @media screen and (min-width: 860px) {
+    nav {
+        padding: 0 65px;
+    }
+
     nav > div.mobile-navigation {
         display: none;
     }
 
     nav > ul.desktop-navigation {
         display: inline-flex; /* I need this to remove trailing whitespaces after li elements */
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    nav {
+        padding: 0 151px;
     }
 }
 
