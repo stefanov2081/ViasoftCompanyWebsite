@@ -317,6 +317,9 @@ nav > ul > li > ul > li > a:hover {
 
 main > section.hero-image {
     min-height: 366px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 main > section.hero-image > h1,
@@ -357,6 +360,8 @@ main  p {
 }
 
 footer {
+    width: 100%;
+    padding: 0 15px;
     background-color: #F2F2F2;
 }
 
@@ -384,17 +389,19 @@ footer .footer-column > a:first-child {
     font-weight: 800;
 }
 
-
 footer .footer-column > p {
     margin: 5px 0;
     color: #616161;
 }
-
 /* Mobile layout end */
 /* Desktop layout start */
 @media screen and (min-width: 860px) {
     .main-content {
         padding: 0 100px 55px 100px;
+    }
+
+    footer {
+        padding: 0 100px;
     }
 }
 
@@ -402,6 +409,11 @@ footer .footer-column > p {
     .main-content {
         width: 100%;
         padding: 0 272px 55px 272px;
+    }
+
+    footer {
+        width: 100%;
+        padding: 0 272px;
     }
 }
 
@@ -456,10 +468,7 @@ h3 {
 
 /* What We Do - Page - Start */
 main > section.hero-image.what-we-do {
-    background: url('images/hero-images/what-we-do.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url('images/hero-images/what-we-do.png');
 }
 
 .service-card {
@@ -569,12 +578,15 @@ main > section.hero-image.what-we-do {
 
 /* About Us Start */
 main > section.hero-image.about-us {
-    background: url('images/hero-images/about-us.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url('images/hero-images/about-us.png');
 }
 
 /* About Us End */
+
+/* Contact Us Start */
+main > section.hero-image.contact-us {
+    background-image: url('images/hero-images/contact-us.png');
+}
+/* Contact Us End */
 
 /* Navigation end */
