@@ -477,6 +477,10 @@ h3 {
     margin: 0;
 }
 
+.spaced-bottom {
+    margin-bottom: 40px;
+}
+
 /* Generic end */
 
 /* What We Do - Page - Start */
@@ -610,8 +614,6 @@ main > section.hero-image.our-work {
 .project > img{
     max-width: 100%;
 }
-
-
 
 @media screen and (min-width: 860px) {
     .project {
