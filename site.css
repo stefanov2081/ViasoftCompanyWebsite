@@ -342,6 +342,7 @@ main > section.hero-image > p,
 main > section.hero-image > a {
     margin: 0 0 15px 0;
     color: #FFF;
+    text-decoration: none;
 }
 
 main > section.hero-image > h1 {
