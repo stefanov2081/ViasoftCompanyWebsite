@@ -32,6 +32,15 @@ nav {
     font-size: 13px;
 }
 
+nav > .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+nav > .logo-container > img {
+    height: 85%;
+}
+
 nav > ul.desktop-navigation {
     display: none;
 }
