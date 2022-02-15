@@ -6,9 +6,7 @@
     color: #262626;
 }
 
-a {
-    text-decoration: none;
-}
+
 
 html, body {
     width: 100%;
@@ -30,6 +28,10 @@ nav {
     border-bottom: 1px solid #E6E6E6;
 
     font-size: 13px;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 nav > .logo-container {
@@ -376,6 +378,10 @@ footer {
     width: 100%;
     padding: 0 15px;
     background-color: #F2F2F2;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 footer .footer-column {
