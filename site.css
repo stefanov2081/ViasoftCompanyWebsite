@@ -589,4 +589,36 @@ main > section.hero-image.contact-us {
 }
 /* Contact Us End */
 
+/* Our Work Start */
+main > section.hero-image.our-work {
+    background-image: url('images/hero-images/our-work.png');
+}
+
+.project > img{
+    max-width: 100%;
+}
+
+
+
+@media screen and (min-width: 860px) {
+    .project {
+        display: flex;
+        align-items: center;
+    }
+
+    .project > img{
+        margin-right: 20px;
+        max-width: 50%;;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1360px) {
+
+}
+/* Our Work End */
+
 /* Navigation end */
