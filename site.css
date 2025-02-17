@@ -498,20 +498,20 @@ main > section.hero-image.what-we-do {
 }
 
 .service-card {
-    flex-basis: 100%;
     display: flex;
+	align-items: center;
     margin-top: 20px;
 }
 
 .service-card > img {
-    flex: 1 0 140px;
+    flex: 0 0 120px;
     margin-right: 10px;
+	height: auto;
 }
 
 .service-card > div {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .service-card > div > h3 {
@@ -524,19 +524,20 @@ main > section.hero-image.what-we-do {
 
 @media screen and (min-width: 860px) {
     .service-card > img {
-        flex-basis: 120px;
+        flex-basis: 130px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .service-card > img {
-        flex-basis: 100px;
+        flex-basis: 140px;
     }
 }
 
 @media screen and (min-width: 1360px) {
     .service-card {
-        flex-basis: 50%;
+        flex-basis: calc(50% - 10px);
+		margin-right: 10px
     }
 }
 
